@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="180" viewBox="0 0 180 180">
+  <defs>
+    <linearGradient id="gradient180" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2563eb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="180" height="180" rx="40" fill="url(#gradient180)"/>
+  
+  <g fill="white" opacity="0.95">
+    <!-- Root folder -->
+    <rect x="25" y="35" width="16" height="12" rx="3"/>
+    <rect x="41" y="35" width="45" height="12" rx="3"/>
+    
+    <!-- Main vertical line -->
+    <rect x="33" y="47" width="3" height="90"/>
+    
+    <!-- First level folder -->
+    <rect x="36" y="58" width="3" height="12"/>
+    <rect x="39" y="61" width="12" height="6" rx="1"/>
+    <rect x="51" y="58" width="35" height="12" rx="3"/>
+    
+    <!-- Second level files -->
+    <rect x="48" y="80" width="3" height="12"/>
+    <rect x="51" y="83" width="12" height="6" rx="1"/>
+    <rect x="63" y="80" width="45" height="12" rx="3"/>
+    
+    <rect x="48" y="102" width="3" height="12"/>
+    <rect x="51" y="105" width="12" height="6" rx="1"/>
+    <rect x="63" y="102" width="35" height="12" rx="3"/>
+    
+    <!-- Third level folder -->
+    <rect x="36" y="125" width="3" height="12"/>
+    <rect x="39" y="128" width="12" height="6" rx="1"/>
+    <rect x="51" y="125" width="40" height="12" rx="3"/>
+    
+    <!-- Connection lines -->
+    <rect x="36" y="47" width="12" height="3"/>
+    <rect x="36" y="70" width="12" height="3"/>
+    <rect x="48" y="70" width="12" height="3"/>
+    <rect x="48" y="92" width="12" height="3"/>
+    <rect x="48" y="114" width="12" height="3"/>
+    <rect x="36" y="137" width="12" height="3"/>
+  </g>
+</svg>

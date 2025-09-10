@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Minimal Design System - Clean and Modern */
+
+@layer base {
+  :root {
+    /* Core Colors - Minimal light theme */
+    --background: 0 0% 100%;
+    --background-secondary: 0 0% 98%;
+    --foreground: 0 0% 9%;
+    --foreground-muted: 0 0% 45%;
+
+    /* Interactive Elements */
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 9%;
+    
+    --accent: 0 0% 9%;
+    --accent-foreground: 0 0% 98%;
+
+    /* UI Components */
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 9%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 9%;
+    
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+    
+    --border: 0 0% 89%;
+    --input: 0 0% 89%;
+    --ring: 0 0% 9%;
+    
+    /* Syntax Highlighting */
+    --syntax-folder: 142 76% 36%;
+    --syntax-file: 217 91% 60%;
+    --syntax-comment: 0 0% 60%;
+    --syntax-string: 142 76% 36%;
+    --syntax-error: 0 84% 60%;
+    
+    /* Special States */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --success: 142 76% 36%;
+    --warning: 48 96% 53%;
+    
+    /* Transitions */
+    --transition-smooth: all 0.2s ease-in-out;
+    
+    --radius: 0.5rem;
+    --radius-large: 0.75rem;
+  }
+
+  /* Dark mode */
+  .dark {
+    --background: 0 0% 3.9%;
+    --background-secondary: 0 0% 7%;
+    --foreground: 0 0% 98%;
+    --foreground-muted: 0 0% 63.9%;
+    
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    
+    --syntax-folder: 142 76% 36%;
+    --syntax-file: 217 91% 60%;
+    --syntax-comment: 0 0% 63.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+  
+  /* Code elements use monospace */
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+  }
+  
+  /* Custom scrollbars */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--background-secondary));
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--border));
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--muted-foreground));
+  }
+}
+
+@layer components {
+  /* Minimal animations */
+  .fade-in {
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(4px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Syntax highlighting classes */
+  .syntax-folder {
+    color: hsl(var(--syntax-folder));
+  }
+  
+  .syntax-file {
+    color: hsl(var(--syntax-file));
+  }
+  
+  .syntax-comment {
+    color: hsl(var(--syntax-comment));
+    font-style: italic;
+  }
+  
+  .syntax-string {
+    color: hsl(var(--syntax-string));
+  }
+  
+  .syntax-error {
+    color: hsl(var(--syntax-error));
+    background: hsl(var(--syntax-error) / 0.1);
+    border-radius: 4px;
+    padding: 0 4px;
+  }
+
+  /* Mobile-responsive utilities */
+  .mobile-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--border)) transparent;
+  }
+  
+  .mobile-scrollbar::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+  
+  .mobile-scrollbar::-webkit-scrollbar-thumb {
+    background: hsl(var(--border));
+    border-radius: 2px;
+  }
+
+  /* Enhanced interaction states */
+  .interactive-hover {
+    transition: var(--transition-smooth);
+  }
+  
+  .interactive-hover:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-elegant);
+  }
+
+  /* Responsive text utilities */
+  .text-responsive {
+    font-size: clamp(0.875rem, 2.5vw, 1rem);
+  }
+  
+  .heading-responsive {
+    font-size: clamp(1.25rem, 3vw, 1.5rem);
+  }
+}
